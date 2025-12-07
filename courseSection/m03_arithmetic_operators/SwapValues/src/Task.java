@@ -4,15 +4,14 @@ public class Task {
         int num1 = 10;
         int num2 = 20;
 
-        // ----Do not change below lines. needed for testing---
-        num1 = args.length > 0 ? Integer.parseInt(args[0]) : num1;
-        num2 = args.length > 0 ? Integer.parseInt(args[1]) : num2;
-        // ------------------------------
-
-        //Write your solution here
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
 
         System.out.println("num1 = " + num1);
         System.out.println("num2 = " + num2);
-
-     }
+    }
 }
+
+
+
