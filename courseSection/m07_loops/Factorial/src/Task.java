@@ -2,12 +2,12 @@ public class Task {
     public static void main(String[] args) {
 
         int n = 5;
+        int factorial = 1;
 
-        // ----Do not change below lines. needed for testing---
-        n = args.length > 0 ? Integer.parseInt(args[0]) : n;
-        //--------------------------------
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
 
-        //Write your solution here
-
+        System.out.println(factorial);
     }
 }
