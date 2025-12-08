@@ -1,14 +1,14 @@
 public class Task {
+
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
     public static void main(String[] args) {
 
         System.out.println(isEven(4));
-
+        System.out.println(isEven(7));
+        System.out.println(isEven(10));
+        System.out.println(isEven(15));
     }
-
-    public static boolean isEven(int n){
-
-        //Write your solution here
-
-    }
-
 }
