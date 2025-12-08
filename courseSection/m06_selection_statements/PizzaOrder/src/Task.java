@@ -8,7 +8,7 @@ public class Task {
 
         double totalPrice = 0;
 
-        // ✅ Базова ціна
+
         if (size == 'S') {
             totalPrice = 13.99;
 
