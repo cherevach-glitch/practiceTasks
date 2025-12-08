@@ -1,19 +1,24 @@
-
 public class Task {
+
     public static void main(String[] args) {
+
         System.out.println(extractNum("aa2aa3"));
+        System.out.println(extractNum("aa!%$#.10aa"));
+
     }
 
     public static String extractNum(String str) {
 
-        StringBuilder result = new StringBuilder();
-        for (char ch : str.toCharArray()) {
-            if (Character.isDigit(ch)) {  // Check if the character is a digit
-                result.append(ch);  // Append the digit to the result
+        String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isDigit(ch)) {
+                result += ch;
             }
         }
-        return result.toString();  // Convert StringBuilder to String and return
 
+        return result;
     }
-
 }
