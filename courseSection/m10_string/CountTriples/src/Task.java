@@ -1,17 +1,25 @@
-
 public class Task {
+
     public static void main(String[] args) {
-        System.out.println(countTriples("abcXXXabc"));
-        System.out.println(countTriples("xxxabyyyycd"));
-        System.out.println(countTriples("java"));
+
+        System.out.println(countTriples("abcXXXabc"));   // 1
+        System.out.println(countTriples("xxxabyyyycd")); // 3
+        System.out.println(countTriples("java"));        // 0
     }
 
-    public static int countTriples(String str){
+    public static int countTriples(String str) {
 
-        int tripleCount = 0;
+        int count = 0;
 
-        //Write your solution here
+        for (int i = 0; i < str.length() - 2; i++) {
 
-        return tripleCount;
+            char current = str.charAt(i);
+
+            if (str.charAt(i + 1) == current && str.charAt(i + 2) == current) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
