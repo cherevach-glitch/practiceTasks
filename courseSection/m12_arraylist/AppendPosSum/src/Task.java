@@ -9,9 +9,16 @@ public class Task {
     }
 
     public static ArrayList<Integer> appendPosSum(ArrayList<Integer> list) {
+        ArrayList<Integer> result = new ArrayList<>();
+        int sum = 0;
 
-        //Write your solution here
-
+        for (Integer num : list) {
+            if (num > 0) {
+                result.add(num);
+                sum += num;
+            }
+        }
+        result.add(sum);
+        return result;
     }
-
 }
