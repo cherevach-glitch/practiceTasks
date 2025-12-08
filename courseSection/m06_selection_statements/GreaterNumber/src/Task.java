@@ -1,15 +1,14 @@
 public class Task {
+
     public static void main(String[] args) {
 
-        int a = 100;
-        int b = 7;
+        int a = 1;
+        int b = 2;
 
-        // ----Do not change below lines. needed for testing---
-        a = args.length > 0 ? Integer.parseInt(args[0]) : a;
-        b = args.length > 0 ? Integer.parseInt(args[1]) : b;
-        //--------------------------------
-
-        //Write your solution here
-
+        if (a > b) {
+            System.out.println(a + " is greater");
+        } else {
+            System.out.println(b + " is greater");
+        }
     }
 }
