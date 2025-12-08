@@ -1,18 +1,21 @@
 public class Task {
+
     public static void main(String[] args) {
 
         int first = 5;
-        int second = 30;
-        int third = 50;
+        int second = 10;
+        int third = 7;
 
-        // ----Do not change below lines. needed for testing---
-        first = args.length > 0 ? Integer.parseInt(args[0]) : first;
-        second = args.length > 0 ? Integer.parseInt(args[1]) : second;
-        third = args.length > 0 ? Integer.parseInt(args[2]) : third;
-        //--------------------------------
         int middle;
 
-        //Write your solution here
+        if ((first > second && first < third) || (first < second && first > third)) {
+            middle = first;
+        } else if ((second > first && second < third) || (second < first && second > third)) {
+            middle = second;
+        } else {
+            middle = third;
+        }
 
+        System.out.println("middle number = " + middle);
     }
 }
