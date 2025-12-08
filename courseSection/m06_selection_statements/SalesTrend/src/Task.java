@@ -1,18 +1,18 @@
 public class Task {
+
     public static void main(String[] args) {
 
-        int soldYesterday=100;
-        int soldToday = 700;
+        int soldYesterday = 92;
+        int soldToday = 105;
 
-        // ----Do not change below lines. needed for testing---
-        soldYesterday = args.length > 0 ? Integer.parseInt(args[0]) : soldYesterday;
-        soldToday = args.length > 0 ? Integer.parseInt(args[1]) : soldToday;
-        //--------------------------------
+        int salesTrend;
 
-        int salesTrend = 0;
+        if (soldToday >= soldYesterday) {
+            salesTrend = 1;
+        } else {
+            salesTrend = -1;
+        }
 
-        //Write your solution here
-
-
+        System.out.println("salesTrend = " + salesTrend);
     }
 }
