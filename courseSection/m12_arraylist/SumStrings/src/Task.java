@@ -1,19 +1,25 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Task {
+
     public static void main(String[] args) {
-        System.out.println("getSum([\"123\", \"34\", \"513\"]) -> " + getSum(new ArrayList<>(Arrays.asList("123", "34", "513"))));
-        System.out.println("getSum([\"4913\", \"1248\"]) -> " + getSum(new ArrayList<>(Arrays.asList("4913", "1248"))));
-        System.out.println("getSum([\"00110101\", \"12452\", \"3111\"]) -> " + getSum(new ArrayList<>(Arrays.asList("00110101", "12452", "3111"))));
 
+        ArrayList<String> list = new ArrayList<>();
+        list.add("123");
+        list.add("34");
+        list.add("513");
+
+        System.out.println(sumStrings(list));
     }
 
-    public static ArrayList<Integer> getSum(ArrayList<String> digits) {
+    public static int sumStrings(ArrayList<String> list) {
 
-        //Write your solution here
+        int sum = 0;
 
+        for (String each : list) {
+            sum += Integer.parseInt(each);
+        }
+
+        return sum;
     }
-
 }
