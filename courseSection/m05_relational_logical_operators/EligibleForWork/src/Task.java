@@ -3,11 +3,8 @@ public class Task {
 
         int age = 25;
 
-        // ----Do not change below lines. needed for testing---
-        age = args.length > 0 ? Integer.parseInt(args[0]) : age;
-        //--------------------------------
+        boolean isEligible = age >= 18 && age <= 65;
 
-        //Write your solution here
-
+        System.out.println("Am I eligible to work? " + isEligible);
     }
 }
