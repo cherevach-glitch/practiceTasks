@@ -6,36 +6,53 @@ public class Task {
         Scanner input = new Scanner(System.in);
         double totalPrice = 0;
 
-        System.out.println("Select the screen size");
+        System.out.println("Select screen size:");
         double screenSize = input.nextDouble();
 
-        //Add cost to totalPrice based on screenSize
+        if (screenSize == 13.3) {
+            totalPrice += 200;
+        } else if (screenSize == 15.0) {
+            totalPrice += 300;
+        } else if (screenSize == 17.3) {
+            totalPrice += 400;
+        }
 
-        System.out.println("Select CPU type");
+        System.out.println("Select CPU type:");
         String cpu = input.next();
 
-        //Add cost to totalPrice based on cpu
+        if (cpu.equals("i3")) {
+            totalPrice += 150;
+        } else if (cpu.equals("i5")) {
+            totalPrice += 250;
+        } else if (cpu.equals("i7")) {
+            totalPrice += 350;
+        }
 
-        System.out.println("Select RAM size");
+        System.out.println("Select RAM size:");
         int ram = input.nextInt();
+        totalPrice += (ram / 4) * 50;
 
-        //Add cost to totalPrice based on ram
-
-        System.out.println("Select storage type");
+        System.out.println("Select storage type:");
         String storageType = input.next();
 
-        System.out.println("Select storage amount");
-        int storageAmount = input.nextInt();
+        System.out.println("Select storage size:");
+        int storageSize = input.nextInt();
 
-        //Add cost to totalPrice based on storageType and storageAmount
+        if (storageType.equals("HDD")) {
+            totalPrice += (storageSize / 500) * 50;
+        } else if (storageType.equals("SSD")) {
+            totalPrice += (storageSize / 500) * 100;
+        }
 
         System.out.println("Select screen resolution:");
         String resolution = input.next();
 
-        //Add to totalPrice based on resolution
+        if (resolution.equals("FULLHD")) {
+            totalPrice += 100;
+        } else if (resolution.equals("4K")) {
+            totalPrice += 200;
+        }
 
         System.out.println("Final price is: $" + totalPrice);
-
-
     }
 }
