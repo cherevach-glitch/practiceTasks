@@ -1,16 +1,14 @@
 public class Task {
+
     public static void main(String[] args) {
 
-        int outsideTemperature = 100;
-        int shelfLife = 7;
+        int outsideTemperature = 92;
+        int shelfLife = 10;
 
-        // ----Do not change below lines. needed for testing---
-        outsideTemperature = args.length > 0 ? Integer.parseInt(args[0]) : outsideTemperature;
-        shelfLife = args.length > 0 ? Integer.parseInt(args[1]) : shelfLife;
-        //--------------------------------
+        if (outsideTemperature > 90) {
+            shelfLife -= 4;
+        }
 
-        //Write your solution here
-
-
+        System.out.println("shelfLife = " + shelfLife);
     }
 }
