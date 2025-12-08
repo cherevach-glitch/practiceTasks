@@ -1,14 +1,20 @@
 public class Task {
+
     public static void main(String[] args) {
-        int house = 55;
-        int player = 85;
 
-        // ----Do not change below lines. needed for testing---
-        house = args.length > 0 ? Integer.parseInt(args[0]) : house;
-        player = args.length > 0 ? Integer.parseInt(args[1]) : player;
-        //--------------------------------
+        int house = 8;
+        int player = 21;
 
-        //Write your solution here
-
+        if (player > 21) {
+            System.out.println("player bust");
+        } else if (player == house) {
+            System.out.println("its a tie");
+        } else if (player == 21) {
+            System.out.println("player win");
+        } else if (house > player) {
+            System.out.println("player lose");
+        } else {
+            System.out.println("player win");
+        }
     }
 }
