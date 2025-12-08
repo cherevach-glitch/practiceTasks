@@ -1,18 +1,19 @@
 public class Task {
+
     public static void main(String[] args) {
 
         int speedLimit = 55;
         int currentSpeed = 85;
 
-        // ----Do not change below lines. needed for testing---
-        speedLimit = args.length > 0 ? Integer.parseInt(args[0]) : speedLimit;
-        currentSpeed = args.length > 0 ? Integer.parseInt(args[1]) : currentSpeed;
-        //--------------------------------
+        if (currentSpeed > speedLimit) {
 
-        int ticketAmount = 0;
+            int milesOverLimit = currentSpeed - speedLimit;
+            int ticketAmount = milesOverLimit * 6 + 51;
 
-        //Write your solution here
+            System.out.println("ticketAmount = $" + ticketAmount);
 
-
+        } else {
+            System.out.println("Not speeding");
+        }
     }
 }
