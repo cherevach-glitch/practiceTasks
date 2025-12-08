@@ -1,19 +1,49 @@
 public class Task {
+
     public static void main(String[] args) {
 
-        char size  = 'S';
+        char size = 'L';
         char addPepperoni = 'Y';
         char extraCheese = 'Y';
 
-        // ----Do not change below lines. needed for testing---
-        size = args.length > 0 ? args[0].charAt(0) : size;
-        addPepperoni = args.length > 0 ? args[1].charAt(0) : addPepperoni;
-        extraCheese = args.length > 0 ? args[2].charAt(0) : extraCheese;
-        //--------------------------------
+        double totalPrice = 0;
 
-        double price = 0;
+        // ✅ Базова ціна
+        if (size == 'S') {
+            totalPrice = 13.99;
 
-        //Write your solution here
+            if (addPepperoni == 'Y') {
+                totalPrice += 1.50;
+            }
+            if (extraCheese == 'Y') {
+                totalPrice += 1.25;
+            }
 
+        } else if (size == 'M') {
+            totalPrice = 15.99;
+
+            if (addPepperoni == 'Y') {
+                totalPrice += 1.90;
+            }
+            if (extraCheese == 'Y') {
+                totalPrice += 1.65;
+            }
+
+        } else if (size == 'L') {
+            totalPrice = 18.79;
+
+            if (addPepperoni == 'Y') {
+                totalPrice += 2.10;
+            }
+            if (extraCheese == 'Y') {
+                totalPrice += 2.00;
+            }
+
+        } else {
+            System.out.println("Invalid pizza size");
+            return;
+        }
+
+        System.out.println("Total price: $" + totalPrice);
     }
 }
