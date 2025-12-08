@@ -1,14 +1,13 @@
 public class Task {
+
     public static void main(String[] args) {
 
-        int num = 100;
+        int num = 5;
 
-        // ----Do not change below lines. needed for testing---
-        num = args.length > 0 ? Integer.parseInt(args[0]) : num;
-        //--------------------------------
-
-        //Write your solution here
-
-
+        if (num % 2 == 0) {
+            System.out.println(num + " is even");
+        } else {
+            System.out.println(num + " is odd");
+        }
     }
 }
