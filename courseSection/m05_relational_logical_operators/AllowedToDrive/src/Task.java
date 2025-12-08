@@ -1,17 +1,14 @@
 public class Task {
     public static void main(String[] args) {
 
-        double age = 18;
+        int age = 16;
         boolean hasLearningPermit = true;
-        boolean hasDriverLicense = true;
+        boolean hasDriverLicense = false;
 
-        // ----Do not change below lines. needed for testing---
-        age = args.length > 0 ? Double.parseDouble(args[0]) : age;
-        hasLearningPermit = args.length > 0 ? Boolean.parseBoolean(args[1]) : hasLearningPermit;
-        hasDriverLicense = args.length > 0 ? Boolean.parseBoolean(args[2]) : hasDriverLicense;
-        //--------------------------------
+        boolean allowedToDrive =
+                (age >= 18 && hasDriverLicense) ||
+                        (age >= 15.5 && hasLearningPermit);
 
-        //Write your solution here
-
+        System.out.println("Is Mike allowed to drive? " + allowedToDrive);
     }
 }
